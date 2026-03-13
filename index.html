@@ -605,9 +605,27 @@
 
     .portfolio-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 16px;
       margin-bottom: 44px;
+    }
+
+    @media (max-width: 1100px) {
+      .portfolio-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 420px) {
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     .pcard {
@@ -831,6 +849,12 @@
     }
 
     /* ── RESPONSIVE ── */
+    @media (max-width: 1100px) {
+      .portfolio-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
     @media (max-width: 900px) {
       .hero-inner {
         grid-template-columns: 1fr;
@@ -855,7 +879,7 @@
       }
 
       .portfolio-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
       }
 
       nav {
@@ -864,6 +888,15 @@
 
       .nav-links a:not(.nav-wa) {
         display: none;
+      }
+
+      .contact-btns {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .btn {
+        justify-content: center;
       }
     }
 
@@ -877,15 +910,15 @@
       }
 
       .portfolio-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .section-inner {
-        padding: 72px 24px;
+        padding: 72px 20px;
       }
 
       .contact-inner {
-        padding: 72px 24px;
+        padding: 72px 20px;
       }
 
       footer {
@@ -893,6 +926,28 @@
         align-items: flex-start;
         gap: 12px;
         padding: 24px;
+      }
+
+      .hero-stats {
+        gap: 24px;
+      }
+
+      .hero-btns {
+        flex-direction: column;
+      }
+
+      h1 {
+        font-size: 56px;
+      }
+
+      .portfolio-hd {
+        margin-bottom: 32px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .portfolio-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -1102,98 +1157,110 @@
       </div>
 
       <div class="portfolio-grid">
-        <!-- Card 1 -->
-        <div class="portfolio-grid" style="grid-template-columns: repeat(4, 1fr);">
 
-          <div class="pcard reveal">
-            <div class="pcard-img-wrap">
-              <img src="KONO.jpeg" alt="Lámpara Kono" class="pcard-img" />
-              <span class="pcard-tag">ILUMINACIÓN</span>
-            </div>
-            <div class="pcard-body">
-              <h3>Lámpara Kono</h3>
-              <p>Diseño moderno y luz cálida fabricada en impresión 3D.</p>
-            </div>
+        <div class="pcard reveal">
+          <div class="pcard-img-wrap">
+            <img src="KONO.jpeg" alt="Lámpara Kono" class="pcard-img" />
+            <span class="pcard-tag">ILUMINACIÓN</span>
           </div>
-
-          <div class="pcard reveal reveal-delay-1">
-            <div class="pcard-img-wrap">
-              <img src="ORIS.PNG" alt="Lámpara Oris" class="pcard-img" />
-              <span class="pcard-tag">ILUMINACIÓN</span>
-            </div>
-            <div class="pcard-body">
-              <h3>Lámpara Oris</h3>
-              <p>Geometría de origami con luz suave para espacios únicos.</p>
-            </div>
+          <div class="pcard-body">
+            <h3>Lámpara Kono</h3>
+            <p>Diseño moderno y luz cálida fabricada en impresión 3D.</p>
           </div>
-
-          <div class="pcard reveal reveal-delay-2">
-            <div class="pcard-img-wrap">
-              <img src="CORTADOR.png" alt="Cortador" class="pcard-img" />
-              <span class="pcard-tag">INDUSTRIAL</span>
-            </div>
-            <div class="pcard-body">
-              <h3>Cortador</h3>
-              <p>Piezas técnicas de precisión para uso industrial.</p>
-            </div>
-          </div>
-
-          <div class="pcard reveal reveal-delay-3">
-            <div class="pcard-img-wrap">
-              <img src="VIAJERO.jpeg" alt="Mate Viajero AFA" class="pcard-img" />
-              <span class="pcard-tag">COLECCIONABLE</span>
-            </div>
-            <div class="pcard-body">
-              <h3>Mate Viajero AFA</h3>
-              <p>Mate multicolor con escudo AFA en relieve.</p>
-            </div>
-          </div>
-
-          <div class="pcard reveal reveal-delay-4">
-            <div class="pcard-img-wrap">
-              <img src="guardacartas.jpeg" alt="Guarda Cartas" class="pcard-img" />
-              <span class="pcard-tag">GAMING</span>
-            </div>
-            <div class="pcard-body">
-              <h3>Guarda Cartas</h3>
-              <p>Caja para naipes con diseño personalizado.</p>
-            </div>
-          </div>
-
-          <div class="pcard reveal reveal-delay-5">
-            <div class="pcard-img-wrap">
-              <img src="Photoroom_20260106_230859.jpg.jpeg" alt="Card Box Bastos" class="pcard-img" />
-              <span class="pcard-tag">GAMING</span>
-            </div>
-            <div class="pcard-body">
-              <h3>Card Box — Bastos</h3>
-              <p>Box con contador de puntos integrado.</p>
-            </div>
-          </div>
-
-          <div class="pcard reveal reveal-delay-1">
-            <div class="pcard-img-wrap">
-              <img src="Poker.jpeg" alt="Card Box Espadas" class="pcard-img" />
-              <span class="pcard-tag">GAMING</span>
-            </div>
-            <div class="pcard-body">
-              <h3>Card Box — Espadas</h3>
-              <p>Caja multicolor con logo personalizado en relieve.</p>
-            </div>
-          </div>
-
-          <div class="pcard reveal reveal-delay-2">
-            <div class="pcard-img-wrap">
-              <img src="Contador de Tantos.jpeg" alt="Contador de Tantos" class="pcard-img" />
-              <span class="pcard-tag">GAMING</span>
-            </div>
-            <div class="pcard-body">
-              <h3>Contador de Tantos</h3>
-              <p>Contador de puntos para juegos de cartas.</p>
-            </div>
-          </div>
-
         </div>
+
+        <div class="pcard reveal reveal-delay-1">
+          <div class="pcard-img-wrap">
+            <img src="ORIS.PNG" alt="Lámpara Oris" class="pcard-img" />
+            <span class="pcard-tag">ILUMINACIÓN</span>
+          </div>
+          <div class="pcard-body">
+            <h3>Lámpara Oris</h3>
+            <p>Geometría de origami con luz suave para espacios únicos.</p>
+          </div>
+        </div>
+
+        <div class="pcard reveal reveal-delay-2">
+          <div class="pcard-img-wrap">
+            <img src="CORTADOR.png" alt="Cortador" class="pcard-img" />
+            <span class="pcard-tag">INDUSTRIAL</span>
+          </div>
+          <div class="pcard-body">
+            <h3>Cortador Circular</h3>
+            <p>Piezas técnicas de precisión para uso industrial.</p>
+          </div>
+        </div>
+
+        <div class="pcard reveal reveal-delay-3">
+          <div class="pcard-img-wrap">
+            <img src="VIAJERO.jpeg" alt="Jarro Viajero AFA" class="pcard-img" />
+            <span class="pcard-tag">COLECCIONABLE</span>
+          </div>
+          <div class="pcard-body">
+            <h3>Jarro Viajero AFA</h3>
+            <p>Jarro multicolor con escudo AFA en relieve.</p>
+          </div>
+        </div>
+
+        <div class="pcard reveal reveal-delay-4">
+          <div class="pcard-img-wrap">
+            <img src="guardacartas.jpeg" alt="Card Box — Oro" class="pcard-img" />
+            <span class="pcard-tag">GAMING</span>
+          </div>
+          <div class="pcard-body">
+            <h3>Card Box — Oro</h3>
+            <p>Caja para naipes con diseño personalizado.</p>
+          </div>
+        </div>
+
+        <div class="pcard reveal reveal-delay-5">
+          <div class="pcard-img-wrap">
+            <img src="Photoroom_20260106_230859.jpg.jpeg" alt="Card Box Bastos" class="pcard-img" />
+            <span class="pcard-tag">GAMING</span>
+          </div>
+          <div class="pcard-body">
+            <h3>Card Box — Bastos</h3>
+            <p>Box con Contador de Puntos integrado.</p>
+          </div>
+        </div>
+
+        <div class="pcard reveal reveal-delay-1">
+          <div class="pcard-img-wrap">
+            <img src="Poker.jpeg" alt="Card Box Espadas" class="pcard-img" />
+            <span class="pcard-tag">GAMING</span>
+          </div>
+          <div class="pcard-body">
+            <h3>Card Box — Espadas</h3>
+            <p>Caja multicolor con logo personalizado en relieve.</p>
+          </div>
+        </div>
+
+        <div class="pcard reveal reveal-delay-2">
+          <div class="pcard-img-wrap">
+            <img src="Contador de Tantos.jpeg" alt="Contador de Tantos" class="pcard-img" />
+            <span class="pcard-tag">GAMING</span>
+          </div>
+          <div class="pcard-body">
+            <h3>Contador de Tantos</h3>
+            <p>Contador de Puntos para juegos de cartas.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="portfolio-more reveal">
+        <a href="https://www.instagram.com/zona3d.sfe/" target="_blank" rel="noopener" class="btn btn-outline">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" viewBox="0 0 24 24">
+            <rect x="2" y="2" width="20" height="20" rx="5" />
+            <circle cx="12" cy="12" r="4" />
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+          </svg>
+          VER MÁS EN INSTAGRAM
+        </a>
+      </div>
+
+    </div>
   </section>
 
   <!-- ── CONTACTO ── -->
